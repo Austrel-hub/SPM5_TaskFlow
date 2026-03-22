@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>TaskFlow</h1>
+      <p>Aplicación de gestión de tareas en JavaScript</p>
+    </header>
+
+    <section class="card">
+      <h2>Nueva tarea</h2>
+      <form id="taskForm">
+        <input type="text" id="description" placeholder="Descripción de la tarea" required>
+        <input type="datetime-local" id="deadline">
+        <button type="submit">Agregar tarea</button>
+      </form>
+      <p id="message"></p>
+    </section>
+
+    <section class="card">
+      <h2>Buscar</h2>
+      <input type="text" id="searchInput" placeholder="Buscar tareas...">
+    </section>
+
+    <section class="card">
+      <h2>Acciones con API</h2>
+      <div class="button-group">
+        <button id="loadApiTasksBtn">Cargar tareas desde API</button>
+        <button id="saveApiTasksBtn">Guardar tarea de ejemplo en API</button>
+      </div>
+      <p id="apiMessage"></p>
+    </section>
+
+    <section class="card">
+      <h2>Lista de tareas</h2>
+      <ul id="taskList"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
